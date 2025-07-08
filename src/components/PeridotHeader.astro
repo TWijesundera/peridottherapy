@@ -1,26 +1,16 @@
 ---
-import PeridotHeaderLink from "./PeridotHeaderLink.astro";
+import Navigation from "./header/Navigation.astro";
+import Hamburger from "./header/Hamburger.astro";
 ---
 
-<header
-  class="grid grid-rows-1 md:grid-cols-2 sm:grid-cols-1 md:gap-20 md:mb-20"
->
-  <div class="place-self-center md:place-self-auto">
-    <h1 class="flex font-serif-display text-6xl font-bold md:ml-10">
+<header class="grid grid-rows-1 grid-cols-3 m-5 md:grid-cols-2 md:gap-20 md:mb-20">
+  <div class="relative content-center col-span-2 md:place-self-auto">
+    <h1
+      class="font-serif-display font-bold text-2xl md:text-6xl md:ml-10"
+    >
       Peridot Therapy
     </h1>
   </div>
-  <div class="place-self-center">
-    <nav class="flex md:gap-20 lg:gap-20">
-      <PeridotHeaderLink href="#services" class="font-serif-text text-xl"
-        >Services</PeridotHeaderLink
-      >
-      <PeridotHeaderLink href="#contact" class="font-serif-text text-xl"
-        >Contact</PeridotHeaderLink
-      >
-      <PeridotHeaderLink href="/about" class="font-serif-text text-xl"
-        >About Me</PeridotHeaderLink
-      >
-    </nav>
-  </div>
+  <Hamburger class="visible md:invisible md:hidden" />
+  <Navigation class="hidden invisible md:visible" />
 </header>

@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import PeridotHeaderLink from "../PeridotHeaderLink.astro";
+
+type Props = HTMLAttributes<"div">;
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={[className, "place-self-center"]} {...props}>
+  <nav class="flex md:gap-20 lg:gap-20">
+    <PeridotHeaderLink href="#services" class="font-serif-text text-xl"
+      >Services</PeridotHeaderLink
+    >
+    <PeridotHeaderLink href="#contact" class="font-serif-text text-xl"
+      >Contact</PeridotHeaderLink
+    >
+    <PeridotHeaderLink href="/about" class="font-serif-text text-xl"
+      >About Me</PeridotHeaderLink
+    >
+  </nav>
+</div>
