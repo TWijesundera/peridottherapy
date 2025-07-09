@@ -6,7 +6,12 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
 
 export default defineConfig([
-  globalIgnores([".astro/*", "dist/*", "src/env.d.ts", "worker-configuration.d.ts"]),
+  globalIgnores([
+    ".astro/*",
+    "dist/*",
+    "src/env.d.ts",
+    "worker-configuration.d.ts",
+  ]),
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js },
