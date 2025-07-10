@@ -16,12 +16,23 @@
   "dependencies": {
     "@astrojs/cloudflare": "12.5.0",
     "@astrojs/mdx": "4.2.4",
-    "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.3.0",
+    "@tailwindcss/vite": "^4.1.10",
     "astro": "5.7.4",
+    "tailwindcss": "^4.1.10",
     "typescript": "5.8.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@typescript-eslint/parser": "^8.36.0",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-astro": "^1.3.1",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "3.6.2",
+    "typescript-eslint": "^8.36.0",
     "wrangler": "4.16.1"
   },
   "scripts": {
@@ -31,7 +42,14 @@
     "check": "astro build && tsc && wrangler deploy --dry-run",
     "deploy": "wrangler deploy",
     "dev": "astro dev",
-    "preview": "astro build && wrangler dev"
+    "preview": "astro build && wrangler dev",
+    "prepare": "husky"
   },
-  "type": "module"
+  "type": "module",
+  "lint-staged": {
+    "*.{js,css,astro}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
 }
