@@ -32,6 +32,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript-eslint": "^8.36.0",
     "wrangler": "4.16.1"
   },
@@ -48,6 +50,7 @@
   "type": "module",
   "lint-staged": {
     "*.{js,css,astro}": [
+      "astro check",
       "prettier --write",
       "eslint --fix"
     ]
