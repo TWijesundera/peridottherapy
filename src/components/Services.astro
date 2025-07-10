@@ -1,4 +1,6 @@
 ---
+import Location from "../images/Location.svg";
+
 const officeLocation = "Ann Arbor Area";
 const insurances = ["Blue Cross Blue Shield", "Aetna", "Priority Health"];
 const privatePay: Record<string, string> = {
@@ -8,15 +10,18 @@ const privatePay: Record<string, string> = {
 ---
 
 <div
-  class="grid grid-rows-[20%_40%_40%] grid-cols-1 gap-x-2 gap-y-5 bg-[#EAEEB6] pb-10"
+  class="grid grid-cols-1 grid-rows-[20%_40%_40%] gap-x-2 gap-y-5 bg-[#EAEEB6] pb-10"
 >
-  <h1 class="place-self-center font-serif-text text-xl mt-5">Services</h1>
-  <div class="bg-white mx-3 rounded-md">
+  <h1 id="services" class="font-serif-text mt-5 place-self-center text-xl">
+    Services
+  </h1>
+  <div class="mx-3 rounded-md bg-white">
     <div class="m-5">
-      <h2 class="font-serif-text font-bold text-2xl">
+      <h2 class="font-serif-text py-2 text-2xl font-bold">
         In person & online sessions available
       </h2>
-      <div class="flex flex-row">
+      <div class="flex flex-row py-2 text-xl">
+        <Location class="-ml-1" />
         <p>{officeLocation}</p>
       </div>
       <p class="font-kokoro">
@@ -27,14 +32,14 @@ const privatePay: Record<string, string> = {
     </div>
   </div>
   <div
-    class="bg-white grid grid-rows-subgrid grid-cols-[49%_2%_49%] rounded-md mx-3 justify-center"
+    class="mx-3 grid grid-cols-[49%_2%_49%] grid-rows-subgrid justify-center rounded-md bg-white"
   >
-    <div class="text-center inline-grid gap-5 p-5">
+    <div class="inline-grid gap-5 p-5 text-center">
       <h2 class="font-serif-text text-2xl">Insurances</h2>
       {insurances.map((insurance) => <p class="font-kokoro">{insurance}</p>)}
     </div>
-    <div class="col-2 border-l-1 border-black place-self-center h-[80%]"></div>
-    <div class="col-3 text-center inline-grid gap-5 p-5">
+    <div class="col-2 h-[80%] place-self-center border-l-1 border-black"></div>
+    <div class="col-3 inline-grid gap-5 p-5 text-center">
       <h2 class="font-serif-text text-2xl">Private Pay</h2>
       {
         Object.keys(privatePay).map((pay) => (
