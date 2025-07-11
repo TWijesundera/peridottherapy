@@ -4,13 +4,15 @@ import Hamburger from "./header/Hamburger.astro";
 ---
 
 <header
-  class="m-5 grid grid-cols-3 grid-rows-1 md:mb-20 md:grid-cols-2 md:gap-20"
+  class="m-5 grid grid-cols-3 grid-rows-1 md:mb-20 md:grid-rows-1 md:gap-20"
 >
-  <div class="relative col-span-2 content-center md:place-self-auto">
-    <h1 class="font-serif-display text-2xl font-bold md:ml-10 md:text-6xl">
+  <div class="col-span-2 inline-flex items-center md:place-self-auto">
+    <h1
+      class="font-serif-display text-2xl font-bold md:row-1 md:ml-10 md:text-6xl"
+    >
       Peridot Therapy
     </h1>
   </div>
-  <Hamburger class="visible md:invisible md:hidden" />
-  <Navigation class="invisible hidden md:visible" />
+  <Hamburger class="visible md:hidden" />
+  <Navigation class="hidden md:col-3 md:row-1 md:inline-flex" />
 </header>
