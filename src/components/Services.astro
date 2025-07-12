@@ -1,5 +1,6 @@
 ---
 import Location from "../images/Location.svg";
+import { Image } from "astro:assets";
 
 const officeLocation = "Ann Arbor Area";
 const insurances = ["Blue Cross Blue Shield", "Aetna", "Priority Health"];
@@ -21,7 +22,8 @@ const privatePay: Record<string, string> = {
         In person & online sessions available
       </h2>
       <div class="flex flex-row py-2 text-xl">
-        <Location class="-ml-1" />
+        <!-- <Location class="-ml-1" /> -->
+        <Image src={Location} class="-ml-1" alt="location pin" loading="lazy" />
         <p>{officeLocation}</p>
       </div>
       <p class="font-kokoro">
@@ -32,14 +34,14 @@ const privatePay: Record<string, string> = {
     </div>
   </div>
   <div
-    class="mx-3 grid grid-cols-[49%_2%_49%] grid-rows-subgrid justify-center rounded-md bg-white"
+    class="mx-3 grid grid-cols-[49%_2%_49%] justify-center rounded-md bg-white"
   >
-    <div class="inline-grid gap-5 p-5 text-center">
+    <div class="inline-flex flex-col gap-5 p-5 text-center">
       <h2 class="font-serif-text text-2xl">Insurances</h2>
       {insurances.map((insurance) => <p class="font-kokoro">{insurance}</p>)}
     </div>
-    <div class="col-2 h-[80%] place-self-center border-l-1 border-black"></div>
-    <div class="col-3 inline-grid gap-5 p-5 text-center">
+    <div class="h-[80%] place-self-center border-l-1 border-black"></div>
+    <div class="inline-flex flex-col gap-5 p-5 text-center">
       <h2 class="font-serif-text text-2xl">Private Pay</h2>
       {
         Object.keys(privatePay).map((pay) => (

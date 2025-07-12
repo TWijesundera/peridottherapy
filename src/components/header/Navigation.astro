@@ -6,15 +6,17 @@ type Props = HTMLAttributes<"nav">;
 
 const { class: className, ...props } = Astro.props;
 const links: Record<string, string> = {
-  Services: "#services",
-  Contact: "#contact",
+  Services: "/#services",
+  Contact: "/#contact",
   "About Me": "/about",
 };
 ---
 
 <nav
+  id="nav"
   class:list={[
     className,
+    "max-w-screen",
     "place-items-center",
     "place-content-center",
     "md:gap-10",
@@ -24,7 +26,10 @@ const links: Record<string, string> = {
 >
   {
     Object.keys(links).map((title) => (
-      <PeridotHeaderLink href={links[title]} class="font-serif-text text-xl">
+      <PeridotHeaderLink
+        href={links[title]}
+        class="font-serif-text w-full pr-2 text-center text-xl hover:bg-gray-100"
+      >
         {title}
       </PeridotHeaderLink>
     ))
