@@ -1,8 +1,39 @@
 ---
-import "../styles/peridot.css";
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import Victoria from "../images/VictoriaFull.jpg";
+
+const license = "TLLP";
 ---
 
-<MainLayout>
-  <h1 class="text-xl font-bold">Hello World</h1>
+<MainLayout color="bg-peridot">
+  <div class="m-5 flex flex-row">
+    <div>
+      <h1 class="font-serif-display p-5 text-5xl">About Me</h1>
+      <div class="ml-5 w-10/12 rounded-xl bg-blue-800 text-center text-white">
+        {license}
+      </div>
+    </div>
+    <Image
+      class="rounded-full"
+      src={Victoria}
+      alt="Victoria Richards"
+      layout="constrained"
+    />
+  </div>
+  <div class="flex flex-col place-content-center gap-5 p-5">
+    <p class="font-kokoro tracking-wide">
+      Hi, I’m Victoria! I believe you know yourself better than anyone else. I’m
+      not here to give advice or tell you what to do - I’m here to support you,
+      reflect with you, and help you move through what you’re working on, at
+      your own pace.
+    </p>
+    <p class="font-kokoro tracking-wide">
+      I graduated from Michigan School of Psychology with my Master of Arts in
+      Clinical Psychology in August of 2025 and am practicing with my TLLP
+      (Temporary Limited License Psychologist). During my Master’s program, I
+      interned at the Michigan School of Psychology’s clinic, working directly
+      with adults of all ages.
+    </p>
+  </div>
 </MainLayout>

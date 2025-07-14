@@ -1,6 +1,7 @@
 ---
 import "../styles/peridot.css";
 import PeridotHeader from "@components/PeridotHeader.astro";
+const { color } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,23 +16,26 @@ import PeridotHeader from "@components/PeridotHeader.astro";
     <link
       rel="preload"
       href="/fonts/dm-serif-display-regular.woff2"
+      type="font/woff2"
       as="font"
       crossorigin
     />
     <link
       rel="preload"
       href="/fonts/dm-serif-text-regular.woff2"
+      type="font/woff2"
       as="font"
       crossorigin
     />
     <link
       rel="preload"
       href="/fonts/kokoro-regular.woff2"
+      type="font/woff2"
       as="font"
       crossorigin
     />
   </head>
-  <body class="bg-white">
+  <body class={color}>
     <PeridotHeader />
     <slot />
   </body>
