@@ -1,4 +1,7 @@
 ---
+import Location from "../images/Location.svg";
+import { Image } from "astro:assets";
+
 const officeLocation = "Ann Arbor Area";
 const insurances = ["Blue Cross Blue Shield", "Aetna", "Priority Health"];
 const privatePay: Record<string, string> = {
@@ -8,41 +11,46 @@ const privatePay: Record<string, string> = {
 ---
 
 <div
-  class="grid grid-rows-[20%_40%_40%] grid-cols-1 gap-x-2 gap-y-5 bg-[#EAEEB6] pb-10"
+  class="flex flex-col place-items-center gap-x-2 gap-y-5 bg-[#EAEEB6] pb-10"
 >
-  <h1 class="place-self-center font-serif-text text-xl mt-5">Services</h1>
-  <div class="bg-white mx-3 rounded-md">
-    <div class="m-5">
-      <h2 class="font-serif-text font-bold text-2xl">
+  <h1 id="services" class="font-serif-text mt-5 text-xl">Services</h1>
+  <div>
+    <div class="mx-3 rounded-md bg-white p-3">
+      <h2 class="font-serif-text p-2 text-2xl">
         In person & online sessions available
       </h2>
-      <div class="flex flex-row">
+      <div class="inline-flex p-2 text-xl">
+        <Image src={Location} class="-ml-1" alt="location pin" loading="lazy" />
         <p>{officeLocation}</p>
       </div>
-      <p class="font-kokoro">
+      <p class="font-kokoro p-2">
         While I work with a broad range of clients, my greatest experience is
         with couples, women, and young adults navigating life transitions or
         experiencing symptoms of anxiety and depression.
       </p>
     </div>
-  </div>
-  <div
-    class="bg-white grid grid-rows-subgrid grid-cols-[49%_2%_49%] rounded-md mx-3 justify-center"
-  >
-    <div class="text-center inline-grid gap-5 p-5">
-      <h2 class="font-serif-text text-2xl">Insurances</h2>
-      {insurances.map((insurance) => <p class="font-kokoro">{insurance}</p>)}
-    </div>
-    <div class="col-2 border-l-1 border-black place-self-center h-[80%]"></div>
-    <div class="col-3 text-center inline-grid gap-5 p-5">
-      <h2 class="font-serif-text text-2xl">Private Pay</h2>
-      {
-        Object.keys(privatePay).map((pay) => (
-          <p class="font-kokoro">
-            {pay} - {privatePay[pay]}
-          </p>
-        ))
-      }
+    <div class="m-3 mx-3 rounded-md bg-white p-3">
+      <div class="my-5 flex flex-row place-content-evenly">
+        <div class="inline-flex flex-col gap-5 text-center">
+          <h2 class="font-serif-text text-2xl">Insurances</h2>
+          {
+            insurances.map((insurance) => (
+              <p class="font-kokoro">{insurance}</p>
+            ))
+          }
+        </div>
+        <div class="border-1"></div>
+        <div class="inline-flex flex-col gap-5 text-center">
+          <h2 class="font-serif-text text-2xl">Private Pay</h2>
+          {
+            Object.keys(privatePay).map((pay) => (
+              <p class="font-kokoro">
+                {pay} - {privatePay[pay]}
+              </p>
+            ))
+          }
+        </div>
+      </div>
     </div>
   </div>
 </div>

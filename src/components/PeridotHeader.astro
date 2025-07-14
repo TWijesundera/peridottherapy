@@ -3,14 +3,30 @@ import Navigation from "./header/Navigation.astro";
 import Hamburger from "./header/Hamburger.astro";
 ---
 
-<header class="grid grid-rows-1 grid-cols-3 m-5 md:grid-cols-2 md:gap-20 md:mb-20">
-  <div class="relative content-center col-span-2 md:place-self-auto">
-    <h1
-      class="font-serif-display font-bold text-2xl md:text-6xl md:ml-10"
-    >
-      Peridot Therapy
-    </h1>
+<script>
+  document.querySelector("#menu")?.addEventListener("click", () => {
+    const nav = document.querySelector("#nav");
+    nav?.classList.toggle("inline-flex");
+    nav?.classList.toggle("hidden");
+  });
+</script>
+
+<header
+  class="grid grid-cols-3 grid-rows-1 p-5 md:mb-20 md:grid-rows-1 md:gap-20"
+>
+  <div
+    class="col-span-2 inline-flex max-w-screen items-center md:place-self-auto"
+  >
+    <a href="/">
+      <h1
+        class="font-serif-display text-2xl font-bold md:row-1 md:ml-10 md:text-6xl"
+      >
+        Peridot Therapy
+      </h1>
+    </a>
   </div>
-  <Hamburger class="visible md:invisible md:hidden" />
-  <Navigation class="hidden invisible md:visible" />
+  <Hamburger class="visible md:hidden" />
+  <Navigation
+    class="col-span-3 hidden flex-col md:col-3 md:row-1 md:inline-flex md:flex-row"
+  />
 </header>

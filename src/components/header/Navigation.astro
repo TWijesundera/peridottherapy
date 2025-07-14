@@ -1,21 +1,37 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import PeridotHeaderLink from "../PeridotHeaderLink.astro";
+import PeridotHeaderLink from "@components/header/PeridotHeaderLink.astro";
 
-type Props = HTMLAttributes<"div">;
+type Props = HTMLAttributes<"nav">;
+
 const { class: className, ...props } = Astro.props;
+const links: Record<string, string> = {
+  Services: "/#services",
+  Contact: "/#contact",
+  "About Me": "/about",
+};
 ---
 
-<div class:list={[className, "place-self-center"]} {...props}>
-  <nav class="flex md:gap-20 lg:gap-20">
-    <PeridotHeaderLink href="#services" class="font-serif-text text-xl"
-      >Services</PeridotHeaderLink
-    >
-    <PeridotHeaderLink href="#contact" class="font-serif-text text-xl"
-      >Contact</PeridotHeaderLink
-    >
-    <PeridotHeaderLink href="/about" class="font-serif-text text-xl"
-      >About Me</PeridotHeaderLink
-    >
-  </nav>
-</div>
+<nav
+  id="nav"
+  class:list={[
+    className,
+    "max-w-screen",
+    "place-items-center",
+    "place-content-center",
+    "md:gap-10",
+    "lg:gap-20",
+  ]}
+  {...props}
+>
+  {
+    Object.keys(links).map((title) => (
+      <PeridotHeaderLink
+        href={links[title]}
+        class="font-serif-text w-full pr-2 text-center text-xl hover:bg-gray-100"
+      >
+        {title}
+      </PeridotHeaderLink>
+    ))
+  }
+</nav>

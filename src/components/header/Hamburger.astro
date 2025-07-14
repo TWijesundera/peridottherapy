@@ -5,9 +5,24 @@ type Props = HTMLAttributes<"button">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<button class:list={[className, "place-self-end", "self-center"]} {...props}>
+<button
+  id="menu"
+  class:list={[
+    className,
+    "place-self-end",
+    "inline-flex",
+    "items-center",
+    "justify-center",
+    "rounded-lg",
+    "hover:bg-gray-200",
+    "size-10",
+    "p-2",
+  ]}
+  {...props}
+>
+  <span class="sr-only">Open main menu</span>
   <svg
-    class="w-5 h-5"
+    class="size-5"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

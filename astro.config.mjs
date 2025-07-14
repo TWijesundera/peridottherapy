@@ -13,6 +13,7 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
 
   adapter: cloudflare({
+    imageService: "compile",
     platformProxy: {
       enabled: true,
     },
