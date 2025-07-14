@@ -10,6 +10,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://peridotthreapy.com",
   integrations: [sitemap()],
+  image: {
+    domains: ["peridottherapy"]
+  },
 
   adapter: cloudflare({
     imageService: "compile",
