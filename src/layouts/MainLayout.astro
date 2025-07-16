@@ -1,13 +1,6 @@
 ---
-import { getImage } from "astro:assets";
-
 import "../styles/peridot.css";
-import faviconSrc from "../images/favicon.png";
 import PeridotHeader from "@components/PeridotHeader.astro";
-
-const { color } = Astro.props;
-
-const icon = await getImage({ src: faviconSrc, format: "png" });
 ---
 
 <!doctype html>
@@ -18,30 +11,27 @@ const icon = await getImage({ src: faviconSrc, format: "png" });
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Peridot Therapy</title>
-    <link rel="icon" type="image/x-icon" href={icon.src} />
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.png" />
     <link
       rel="preload"
       href="/fonts/dm-serif-display-regular.woff2"
-      type="font/woff2"
       as="font"
       crossorigin
     />
     <link
       rel="preload"
       href="/fonts/dm-serif-text-regular.woff2"
-      type="font/woff2"
       as="font"
       crossorigin
     />
     <link
       rel="preload"
       href="/fonts/kokoro-regular.woff2"
-      type="font/woff2"
       as="font"
       crossorigin
     />
   </head>
-  <body class={color}>
+  <body class="bg-white">
     <PeridotHeader />
     <slot />
   </body>
