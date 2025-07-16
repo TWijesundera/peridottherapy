@@ -1,34 +1,40 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
 import { Image } from "astro:assets";
+
+import MainLayout from "@layouts/MainLayout.astro";
 import Victoria from "../images/VictoriaFull.jpg";
+import Flower from "../images/FlowerTransparent.svg";
 
 const license = "TLLP";
 ---
 
 <MainLayout color="bg-peridot">
-  <div class="m-5 flex flex-row">
-    <div>
-      <h1 class="font-serif-display p-5 text-5xl">About Me</h1>
-      <div class="ml-5 w-10/12 rounded-xl bg-blue-800 text-center text-white">
+  <div class="mt-10 flex flex-row place-content-evenly">
+    <div class="inline-flex flex-col gap-5">
+      <h1 class="font-serif-display text-4xl">About Me</h1>
+      <div
+        class="font-serif-text h-10 w-24 place-content-center rounded-2xl bg-[#142850] text-center text-3xl text-white"
+      >
         {license}
       </div>
     </div>
-    <Image
-      class="rounded-full"
-      src={Victoria}
-      alt="Victoria Richards"
-      layout="constrained"
-    />
+    <Flower class="absolute -z-10" />
+    <div class="size-40">
+      <Image
+        class="max-h-full rounded-full"
+        src={Victoria}
+        alt="Victoria Richards"
+      />
+    </div>
   </div>
-  <div class="flex flex-col place-content-center gap-5 p-5">
-    <p class="font-kokoro tracking-wide">
+  <div class="mt-10 flex flex-col gap-10 p-5">
+    <p class="font-kokoro text-xl">
       Hi, I’m Victoria! I believe you know yourself better than anyone else. I’m
       not here to give advice or tell you what to do - I’m here to support you,
       reflect with you, and help you move through what you’re working on, at
       your own pace.
     </p>
-    <p class="font-kokoro tracking-wide">
+    <p class="font-kokoro text-xl">
       I graduated from Michigan School of Psychology with my Master of Arts in
       Clinical Psychology in August of 2025 and am practicing with my TLLP
       (Temporary Limited License Psychologist). During my Master’s program, I
