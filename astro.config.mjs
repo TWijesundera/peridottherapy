@@ -11,7 +11,9 @@ export default defineConfig({
   site: "https://peridotthreapy.com",
   integrations: [sitemap()],
   image: {
-    domains: ["peridottherapy"]
+    domains: ["peridottherapy"],
+    layout: "constrained",
+    objectFit: "contain",
   },
 
   adapter: cloudflare({
