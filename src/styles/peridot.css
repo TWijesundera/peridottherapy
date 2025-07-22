@@ -7,24 +7,17 @@
 
 @font-face {
   font-display: swap;
-  font-family: "DM Serif Text";
-  font-weight: 400;
-  src: url("/fonts/dm-serif-text-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Kokoro Regular";
-  font-weight: 400;
-  src: url("/fonts/kokoro-regular.woff2") format("woff2");
+  font-family: "Noto Sans";
+  src:
+    url("/fonts/notosans.woff2") format("woff2"),
+    url("/fonts/notosans.woff") format("woff");
 }
 
 @import "tailwindcss";
 
 @theme {
   --font-serif-display: "DM Serif Display", "sans-serif";
-  --font-serif-text: "DM Serif Text", "serif";
-  --font-kokoro: "Kokoro Regular", "sans-serif";
+  --font-noto: "Noto Sans", "sans-serif";
 
   --color-peridot: #eaeeb6;
 }
