@@ -21,7 +21,7 @@ const privatePay: Record<string, string> = {
         <Location />
         <p>{officeLocation}</p>
       </div>
-      <p class="font-kokoro p-2">
+      <p class="font-noto p-2">
         While I work with a broad range of clients, my greatest experience is
         with couples, women, and young adults navigating life transitions or
         experiencing symptoms of anxiety and depression.
@@ -31,18 +31,14 @@ const privatePay: Record<string, string> = {
       <div class="my-5 flex flex-row place-content-evenly">
         <div class="inline-flex flex-col gap-5 text-center">
           <h2 class="font-serif-display text-2xl">Insurances</h2>
-          {
-            insurances.map((insurance) => (
-              <p class="font-kokoro">{insurance}</p>
-            ))
-          }
+          {insurances.map((insurance) => <p class="font-noto">{insurance}</p>)}
         </div>
         <div class="border-l-1"></div>
         <div class="inline-flex flex-col gap-5 text-center">
           <h2 class="font-serif-display text-2xl">Private Pay</h2>
           {
             Object.keys(privatePay).map((pay) => (
-              <p class="font-kokoro">
+              <p class="font-noto">
                 {pay} - {privatePay[pay]}
               </p>
             ))
