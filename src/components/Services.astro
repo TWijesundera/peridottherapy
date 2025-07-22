@@ -1,8 +1,7 @@
 ---
-import Location from "../images/Location.svg";
-import { Image } from "astro:assets";
+import Location from "@images/Location.svg";
 
-const officeLocation = "Ann Arbor Area";
+const officeLocation = "Ypsilanti Area";
 const insurances = ["Blue Cross Blue Shield", "Aetna", "Priority Health"];
 const privatePay: Record<string, string> = {
   Individual: "$160",
@@ -17,8 +16,9 @@ const privatePay: Record<string, string> = {
       <h2 class="font-serif-text p-2 text-2xl">
         In person & online sessions available
       </h2>
-      <div class="inline-flex p-2 text-xl">
-        <Image src={Location} class="-ml-1" alt="location pin" loading="lazy" />
+      <div class="inline-flex items-center p-2 text-xl">
+        <!-- <Image src={Location} class="-ml-1" alt="location pin" loading="eager" /> -->
+        <Location />
         <p>{officeLocation}</p>
       </div>
       <p class="font-kokoro p-2">
@@ -37,7 +37,7 @@ const privatePay: Record<string, string> = {
             ))
           }
         </div>
-        <div class="border-1"></div>
+        <div class="border-l-1"></div>
         <div class="inline-flex flex-col gap-5 text-center">
           <h2 class="font-serif-text text-2xl">Private Pay</h2>
           {
