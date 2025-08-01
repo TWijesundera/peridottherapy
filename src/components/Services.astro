@@ -9,39 +9,52 @@ const privatePay: Record<string, string> = {
 };
 ---
 
-<div class="bg-peridot flex flex-col place-items-center gap-x-2 gap-y-5 pb-10">
-  <h1 id="services" class="font-serif-display mt-5 text-xl">Services</h1>
-  <div>
-    <div class="mx-3 rounded-md bg-white p-3">
-      <h2 class="font-serif-display p-2 text-2xl">
-        In person & online sessions available
-      </h2>
-      <div class="inline-flex items-center p-2 text-xl">
-        <Location />
-        <p>{officeLocation}</p>
-      </div>
-      <p class="font-noto p-2">
-        While I work with a broad range of clients, my greatest experience is
-        with couples, women, and young adults navigating life transitions or
-        experiencing symptoms of anxiety and depression.
-      </p>
-    </div>
-    <div class="m-3 mx-3 rounded-md bg-white p-3">
-      <div class="my-5 flex flex-row place-content-evenly">
-        <div class="inline-flex flex-col gap-5 text-center">
-          <h2 class="font-serif-display text-2xl">Insurances</h2>
-          {insurances.map((insurance) => <p class="font-noto">{insurance}</p>)}
+<div class="bg-peridot sm:bg-blue-500 md:bg-red-500 lg:bg-orange-500">
+  <div
+    class="flex flex-col place-items-center gap-y-5 px-4 pb-10 sm:place-items-start sm:px-10 lg:pl-40"
+  >
+    <h1
+      id="services"
+      class="font-serif-display mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+    >
+      Services
+    </h1>
+    <div>
+      <div class="rounded-md bg-white p-3">
+        <h2 class="font-serif-display p-2 text-2xl">
+          In person & online sessions available
+        </h2>
+        <div class="inline-flex items-center p-2 text-xl">
+          <Location />
+          <p>{officeLocation}</p>
         </div>
-        <div class="border-l-1"></div>
-        <div class="inline-flex flex-col gap-5 text-center">
-          <h2 class="font-serif-display text-2xl">Private Pay</h2>
-          {
-            Object.keys(privatePay).map((pay) => (
-              <p class="font-noto">
-                {pay} - {privatePay[pay]}
-              </p>
-            ))
-          }
+        <p class="font-noto p-2">
+          While I work with a broad range of clients, my greatest experience is
+          with couples, women, and young adults navigating life transitions or
+          experiencing symptoms of anxiety and depression.
+        </p>
+      </div>
+      <div class="mt-3 rounded-md bg-white p-3">
+        <div class="my-3 flex flex-row place-content-evenly">
+          <div class="inline-flex flex-col gap-5 px-3 text-center">
+            <h2 class="font-serif-display text-2xl">Insurances</h2>
+            {
+              insurances.map((insurance) => (
+                <p class="font-noto">{insurance}</p>
+              ))
+            }
+          </div>
+          <div class="border-l-1"></div>
+          <div class="inline-flex flex-col gap-5 px-3 text-center">
+            <h2 class="font-serif-display text-2xl">Private Pay</h2>
+            {
+              Object.keys(privatePay).map((pay) => (
+                <p class="font-noto">
+                  {pay} - {privatePay[pay]}
+                </p>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
