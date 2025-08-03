@@ -1,10 +1,16 @@
 ---
 import Services from "@components/Services.astro";
-import Hero from "../components/Hero.astro";
-import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "@components/Hero.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+import Contact from "@components/formInfo/Contact.astro";
+import Form from "@components/formInfo/Form.astro";
 ---
 
 <MainLayout>
   <Hero />
   <Services />
+  <Contact />
+  <br />
+  <hr class="m-auto w-3/4 border-gray-400" />
+  <Form />
 </MainLayout>
