@@ -13,7 +13,7 @@ const privatePay: Record<string, string> = {
   <div class="flex flex-col place-items-center gap-y-5 px-4 pb-10 sm:px-10">
     <h1
       id="services"
-      class="font-serif-display my-7 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+      class="font-serif-display my-7 text-2xl md:text-3xl xl:text-4xl"
     >
       Services
     </h1>
@@ -21,14 +21,14 @@ const privatePay: Record<string, string> = {
       class="md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4 md:place-self-center lg:max-w-10/12"
     >
       <div class="rounded-md bg-white p-8">
-        <h2 class="font-serif-display p-2 text-2xl lg:text-3xl">
+        <h2 class="font-serif-display p-2 text-xl lg:text-2xl">
           In person & online sessions available
         </h2>
         <div class="inline-flex items-center p-2 text-xl">
           <Location />
           <p class="lg:text-2xl">{officeLocation}</p>
         </div>
-        <p class="font-noto p-2 sm:text-lg lg:text-xl">
+        <p class="font-noto p-2 lg:text-xl">
           While I work with a broad range of clients, my greatest experience is
           with couples, women, and young adults navigating life transitions or
           experiencing symptoms of anxiety and depression.
@@ -40,7 +40,7 @@ const privatePay: Record<string, string> = {
         <div
           class="flex flex-col place-items-center gap-5 self-center px-3 text-center"
         >
-          <h2 class="font-serif-display text-2xl lg:text-3xl">Insurances</h2>
+          <h2 class="font-serif-display text-xl lg:text-2xl">Insurances</h2>
           {
             insurances.map((insurance) => (
               <p class="font-noto lg:text-xl">{insurance}</p>
@@ -49,7 +49,7 @@ const privatePay: Record<string, string> = {
         </div>
         <div class="border-l-1"></div>
         <div class="inline-flex flex-col gap-5 self-center px-3 text-center">
-          <h2 class="font-serif-display text-2xl lg:text-3xl">Private Pay</h2>
+          <h2 class="font-serif-display text-xl lg:text-2xl">Private Pay</h2>
           {
             Object.keys(privatePay).map((pay) => (
               <p class="font-noto lg:text-xl">
