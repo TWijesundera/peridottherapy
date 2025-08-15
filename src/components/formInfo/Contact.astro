@@ -2,7 +2,7 @@
 import Envelope from "@images/Envelope.svg";
 import User from "@images/User.svg";
 
-const email = "victoria@peridottherapy.com";
+const email = "therapy.peridot@gmail.com";
 const psycTodayLink = "";
 ---
 
@@ -17,15 +17,16 @@ const psycTodayLink = "";
 <div class="flex flex-col gap-5 md:place-items-center">
   <div class="inline-flex flex-row items-center gap-3 px-5">
     <Envelope class="size-7" />
-    <a href=`mailto:${email}` class="font-noto text-lg lg:text-xl text-blue-600 underline"
-      >{email}</a
+    <a
+      href=`mailto:${email}`
+      class="font-noto text-lg text-blue-600 underline lg:text-xl">{email}</a
     >
   </div>
   <div class="inline-flex flex-row items-center gap-3 px-5">
     <User class="size-7" />
     <span class="font-noto"
       ><a
-        class="text-blue-600 text-lg lg:text-xl underline visited:text-purple-600"
+        class="text-lg text-blue-600 underline visited:text-purple-600 lg:text-xl"
         href={psycTodayLink}>Psychology Today Profile</a
       ></span
     >
