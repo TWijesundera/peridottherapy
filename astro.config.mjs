@@ -10,7 +10,7 @@ import showTailwindcssBreakpoint from "astro-show-tailwindcss-breakpoint";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://peridotthreapy.com",
+  site: "https://peridottherapy.com",
   integrations: [sitemap(), showTailwindcssBreakpoint()],
 
   adapter: cloudflare({
