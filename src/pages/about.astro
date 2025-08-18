@@ -3,9 +3,12 @@ import { Image } from "astro:assets";
 
 import MainLayout from "@layouts/MainLayout.astro";
 import Victoria from "@images/VictoriaFull.webp";
+
+const description =
+  "About Victoria Richards and her goals for providing therapy to her clients";
 ---
 
-<MainLayout color="bg-peridot">
+<MainLayout color="bg-peridot" pageName="About" seoDescription={description}>
   <div class="mt-10 flex flex-col place-items-center gap-5 md:flex-row">
     <div class="flex flex-col place-items-center gap-10 p-5">
       <h1

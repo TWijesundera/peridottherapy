@@ -1,9 +1,11 @@
 ---
+import { SEO } from "astro-seo";
+
 import "../styles/peridot.css";
 import PeridotHeader from "@components/PeridotHeader.astro";
 import Favicon from "@images/FlowerPicture.png";
 
-const { color } = Astro.props;
+const { color, pageName, seoDescription } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,7 +15,6 @@ const { color } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Peridot Therapy</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/x-icon" href={Favicon.src} />
     <link
@@ -28,6 +29,12 @@ const { color } = Astro.props;
       type="font/woff2"
       as="font"
       crossorigin
+    />
+    <SEO
+      titleTemplate="Peridot Therapy: %s"
+      description={seoDescription}
+      title={pageName}
+      titleDefault="Peridot Therapy"
     />
   </head>
   <body class={color}>

@@ -4,9 +4,12 @@ import Hero from "@components/Hero.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 import Contact from "@components/formInfo/Contact.astro";
 import Form from "@components/formInfo/Form.astro";
+
+const description =
+  "Contact Peridot Therpay to grow and create meaningful change in your life with Victoria Richards. Located in the Ypsilanti area. ";
 ---
 
-<MainLayout>
+<MainLayout color="bg-white" seoDescription={description}>
   <Hero />
   <Services />
   <Contact />
