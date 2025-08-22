@@ -39,6 +39,8 @@ const { color, pageName, seoDescription } = Astro.props;
   </head>
   <body class={color}>
     <PeridotHeader />
-    <slot />
+    <main role="main">
+      <slot />
+    </main>
   </body>
 </html>
