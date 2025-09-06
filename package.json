@@ -16,11 +16,12 @@
   "dependencies": {
     "@astrojs/cloudflare": "12.5.0",
     "@astrojs/sitemap": "3.3.0",
-    "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.12.8",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.5",
     "astro-seo": "^0.8.4",
     "astro-show-tailwindcss-breakpoint": "^1.0.9",
-    "tailwindcss": "^4.1.10",
+    "daisyui": "^5.1.7",
+    "tailwindcss": "^4.1.13",
     "typescript": "5.8.3"
   },
   "devDependencies": {
