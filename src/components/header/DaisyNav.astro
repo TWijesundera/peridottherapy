@@ -1,0 +1,32 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import PeridotHeaderLink from "@components/header/PeridotHeaderLink.astro";
+
+type Props = HTMLAttributes<"nav">;
+
+const { class: className, ...props } = Astro.props;
+const links: Record<string, string> = {
+  Services: "/#services",
+  Contact: "/#contact-form",
+  About: "/about",
+};
+---
+
+<ul
+  id="nav"
+  class:list={[className, "menu md:menu-lg lg:menu-xl md:p-3"]}
+  {...props}
+>
+  {
+    Object.keys(links).map((title) => (
+      <li>
+        <PeridotHeaderLink
+          href={links[title]}
+          class="btn btn-ghost font-noto text-base-content text-xl tracking-wide"
+        >
+          {title}
+        </PeridotHeaderLink>
+      </li>
+    ))
+  }
+</ul>
