@@ -1,0 +1,32 @@
+---
+import DaisyHamburger from "./header/DaisyHamburger.astro";
+import DaisyNav from "./header/DaisyNav.astro";
+---
+
+<header class="p-5" role="banner">
+  <div class="drawer">
+    <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+      <nav class="navbar" role="navigation">
+        <div class="flex-1 md:ml-15">
+          <a href="/">
+            <h1
+              class="font-serif-display text-2xl tracking-wide sm:text-3xl lg:text-4xl"
+            >
+              Peridot Therapy
+            </h1>
+          </a>
+        </div>
+        <DaisyHamburger />
+        <div class="hidden flex-none md:block">
+          <DaisyNav class="menu-horizontal" />
+        </div>
+      </nav>
+    </div>
+    <div class="drawer-side">
+      <label for="nav-drawer" aria-label="close sidebar" class="drawer-overlay"
+      ></label>
+      <DaisyNav class="bg-base-200 min-h-full w-80 p-4" />
+    </div>
+  </div>
+</header>
