@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+import Hero from "@images/HeroImage.webp";
+---
+
+<div class="hero min-h-screen">
+  <div
+    class="hero-content flex-col place-content-evenly p-0 md:flex-row-reverse"
+  >
+    <Image
+      class="max-w-svw px-3 md:max-w-lg xl:max-w-xl xl:px-0"
+      src={Hero}
+      loading="eager"
+      alt="Victoria Richards"
+    />
+    <div class="px-4 text-center">
+      <h1 class="font-serif-display text-5xl font-bold">
+        Hi, I'm Victoria Richards
+      </h1>
+      <p class="font-noto py-6">
+        Everyone’s different, and I think therapy should reflect that. I work
+        with people of all ages and backgrounds, and I show up as my real,
+        authentic self in every session. When that connection clicks, the work
+        we do together often leads to deep growth and meaningful change.
+      </p>
+      <button class="btn btn-accent">Contact Me</button>
+      <!-- Professional verification provided by Psychology Today -->
+      <div class="m-5 flex flex-row place-content-center">
+        <a
+          href="https://www.psychologytoday.com/profile/1541637"
+          class="sx-verified-seal"></a>
+        <script
+          type="text/javascript"
+          src="https://member.psychologytoday.com/verified-seal.js"
+          data-badge="10"
+          data-id="1541637"
+          data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMC9wcm9maWxlLzE1NDE2Mzc/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+        ></script>
+        <!-- End Verification -->
+      </div>
+    </div>
+  </div>
+</div>
