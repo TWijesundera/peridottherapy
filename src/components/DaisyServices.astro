@@ -1,0 +1,64 @@
+---
+import Location from "@images/Location.svg";
+
+const officeLocation = "Ypsilanti Area";
+const insurances = ["Blue Cross Blue Shield", "Aetna", "Priority Health"];
+const privatePay: Record<string, string> = {
+  Individual: "$160",
+  Couples: "$210",
+};
+---
+
+<div class="bg-primary flex flex-col place-items-center gap-y-5 px-4 sm:px-10">
+  <h2
+    id="services"
+    class="font-serif-display p-3 py-7 text-2xl font-bold md:text-3xl xl:text-4xl"
+  >
+    Services
+  </h2>
+  <div
+    class="grid max-w-11/12 grid-cols-1 grid-rows-2 gap-5 md:grid-cols-2 md:grid-rows-1"
+  >
+    <div class="card bg-base-100 lg:card-lg flex-1 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title font-serif-display">
+          In person & online sessions available
+        </h2>
+        <div class="inline-flex items-center p-2 text-xl">
+          <Location />
+          <p class="lg:text-2xl">{officeLocation}</p>
+        </div>
+        <p class="font-noto p-2 lg:text-xl">
+          While I work with a broad range of clients, my greatest experience is
+          with couples, women, and young adults navigating life transitions or
+          experiencing symptoms of anxiety and depression.
+        </p>
+      </div>
+    </div>
+    <div class="card bg-base-100 flex-1 shadow-sm">
+      <div class="card-body gap-7">
+        <div class="flex flex-row items-center justify-center">
+          <div class="flex flex-col place-items-center gap-5">
+            <h2 class="font-serif-display text-lg lg:text-xl">Insurances</h2>
+            {
+              insurances.map((insurance) => (
+                <p class="font-noto lg:text-xl">{insurance}</p>
+              ))
+            }
+          </div>
+          <div class="divider divider-horizontal"></div>
+          <div class="flex flex-col place-items-center gap-5">
+            <h2 class="font-serif-display text-xl">Private Pay</h2>
+            {
+              Object.keys(privatePay).map((pay) => (
+                <p class="font-noto lg:text-xl">
+                  {pay} - {privatePay[pay]}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
