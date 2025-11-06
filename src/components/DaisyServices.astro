@@ -9,7 +9,7 @@ const privatePay: Record<string, string> = {
 };
 ---
 
-<div class="bg-primary flex flex-col place-items-center gap-y-5 px-4 sm:px-10">
+<div class="bg-primary flex flex-col place-items-center pb-10">
   <h2
     id="services"
     class="font-serif-display p-3 py-7 text-2xl font-bold md:text-3xl xl:text-4xl"
@@ -17,11 +17,11 @@ const privatePay: Record<string, string> = {
     Services
   </h2>
   <div
-    class="grid max-w-11/12 grid-cols-1 grid-rows-2 gap-5 md:grid-cols-2 md:grid-rows-1"
+    class="grid max-w-10/12 grid-cols-1 grid-rows-2 gap-5 md:grid-cols-2 md:grid-rows-1"
   >
     <div class="card bg-base-100 lg:card-lg flex-1 shadow-sm">
       <div class="card-body">
-        <h2 class="card-title font-serif-display">
+        <h2 class="card-title font-serif-display text-xl lg:text-2xl">
           In person & online sessions available
         </h2>
         <div class="inline-flex items-center p-2 text-xl">
@@ -35,28 +35,32 @@ const privatePay: Record<string, string> = {
         </p>
       </div>
     </div>
-    <div class="card bg-base-100 flex-1 shadow-sm">
-      <div class="card-body gap-7">
-        <div class="flex flex-row items-center justify-center">
-          <div class="flex flex-col place-items-center gap-5">
-            <h2 class="font-serif-display text-lg lg:text-xl">Insurances</h2>
-            {
-              insurances.map((insurance) => (
-                <p class="font-noto lg:text-xl">{insurance}</p>
-              ))
-            }
-          </div>
-          <div class="divider divider-horizontal"></div>
-          <div class="flex flex-col place-items-center gap-5">
-            <h2 class="font-serif-display text-xl">Private Pay</h2>
-            {
-              Object.keys(privatePay).map((pay) => (
-                <p class="font-noto lg:text-xl">
-                  {pay} - {privatePay[pay]}
-                </p>
-              ))
-            }
-          </div>
+    <div class="card bg-base-100 content-evenly justify-center shadow-sm">
+      <div class="flex flex-row">
+        <div
+          class="card-body flex flex-col place-items-center gap-5 text-center"
+        >
+          <h2 class="font-serif-display card-title text-xl lg:text-2xl">
+            Insurances
+          </h2>
+          {
+            insurances.map((insurance) => (
+              <p class="font-noto lg:text-xl">{insurance}</p>
+            ))
+          }
+        </div>
+        <div class="divider divider-horizontal"></div>
+        <div class="card-body flex flex-col place-items-center gap-5">
+          <h2 class="font-serif-display card-title text-xl lg:text-2xl">
+            Private Pay
+          </h2>
+          {
+            Object.keys(privatePay).map((pay) => (
+              <p class="font-noto lg:text-xl">
+                {pay} - {privatePay[pay]}
+              </p>
+            ))
+          }
         </div>
       </div>
     </div>
