@@ -6,9 +6,9 @@ type Props = HTMLAttributes<"nav">;
 
 const { class: className, ...props } = Astro.props;
 const links: Record<string, string> = {
-  Services: "daisyindex#services",
-  Contact: "daisyindex#contact-form",
-  About: "/daisyabout",
+  Services: "#services",
+  Contact: "#contact-form",
+  About: "/about",
 };
 ---
 
