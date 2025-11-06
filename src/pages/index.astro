@@ -1,7 +1,8 @@
 ---
-import Services from "@components/Services.astro";
-import Hero from "@components/Hero.astro";
-import MainLayout from "@layouts/MainLayout.astro";
+import DaisyLayout from "@layouts/DaisyLayout.astro";
+
+import DaisyHero from "@components/DasiyHero.astro";
+import DaisyServices from "@components/DaisyServices.astro";
 import Contact from "@components/formInfo/Contact.astro";
 import Form from "@components/formInfo/Form.astro";
 
@@ -9,11 +10,10 @@ const description =
   "Contact Peridot Therpay to grow and create meaningful change in your life with Victoria Richards. Located in the Ypsilanti / Ann Arbor area. ";
 ---
 
-<MainLayout color="bg-white" seoDescription={description}>
-  <Hero />
-  <Services />
+<DaisyLayout pageName="Welcome" seoDescription={description}>
+  <DaisyHero />
+  <DaisyServices />
   <Contact />
-  <br />
-  <hr class="m-auto w-3/4 border-gray-400" />
+  <div class="divider m-auto w-3/4 py-10"></div>
   <Form />
-</MainLayout>
+</DaisyLayout>
