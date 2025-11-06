@@ -1,11 +1,20 @@
+<script>
+  const form = document.querySelector("#contact-form");
+
+  form?.addEventListener("load", () => {
+    form?.classList.remove("skeleton");
+  });
+</script>
+
 <div class="m-auto flex h-lvh w-10/12 flex-col">
   <iframe
     id="contact-form"
+    class="skeleton"
     title="Peridot Therapy Contact Form"
     height="100%"
     width="100%"
     loading="lazy"
     src="https://docs.google.com/forms/d/e/1FAIpQLSfwRXGLB0AEr9KXCIOqUYBwayEuWYwYPZbFJKFNhJOGI9OJyQ/viewform?embedded=true&entry.2137365746=No+Preference"
-    >Loading…</iframe
-  >
+    >Loading…
+  </iframe>
 </div>
