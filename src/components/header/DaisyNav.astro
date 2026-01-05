@@ -6,8 +6,8 @@ type Props = HTMLAttributes<"nav">;
 
 const { class: className, ...props } = Astro.props;
 const links: Record<string, string> = {
-  Services: "#services",
-  Contact: "#contact-form",
+  Services: "/#services",
+  Contact: "/#contact-form",
   About: "/about",
 };
 ---
@@ -25,6 +25,7 @@ const links: Record<string, string> = {
       <li>
         <PeridotHeaderLink
           href={links[title]}
+          data-testid="nav-link"
           class="btn btn-ghost font-noto text-base-content m-2 text-xl tracking-wide"
         >
           {title}
