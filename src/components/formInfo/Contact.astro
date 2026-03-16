@@ -18,7 +18,7 @@ const psychTodayLink = "https://www.psychologytoday.com/profile/1541637";
   <div class="inline-flex flex-row items-center gap-3 px-5">
     <Envelope class="size-7" />
     <a
-      href=`mailto:${email}`
+      href={`mailto:${email}`}
       class="font-noto text-info text-lg underline visited:text-purple-600 lg:text-xl"
       >{email}</a
     >
@@ -28,6 +28,8 @@ const psychTodayLink = "https://www.psychologytoday.com/profile/1541637";
     <span class="font-noto"
       ><a
         class="text-info text-lg underline visited:text-purple-600 lg:text-xl"
+        target="_blank"
+        rel="noreferrer noopener"
         href={psychTodayLink}>Psychology Today Profile</a
       ></span
     >
