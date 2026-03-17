@@ -1,0 +1,11 @@
+{
+  "name": "peridottherapy",
+  "compatibility_date": "2026-03-16",
+  "assets": {
+    "directory": "./dist",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "upload_source_maps": true,
+}

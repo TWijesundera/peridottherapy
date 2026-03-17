@@ -14,14 +14,13 @@
     "publish": true
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.9",
-    "@astrojs/sitemap": "3.3.0",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.5",
-    "astro-seo": "^0.8.4",
-    "astro-show-tailwindcss-breakpoint": "^1.0.9",
-    "daisyui": "^5.1.7",
-    "tailwindcss": "^4.1.13",
+    "@astrojs/cloudflare": "^13.1.2",
+    "@astrojs/sitemap": "^3.7.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.5",
+    "astro-seo": "^1.1.0",
+    "daisyui": "^5.5.19",
+    "tailwindcss": "^4.2.1",
     "typescript": "5.8.3"
   },
   "devDependencies": {
@@ -39,7 +38,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript-eslint": "^8.36.0",
-    "wrangler": "4.16.1"
+    "wrangler": "^4.16.1"
   },
   "scripts": {
     "astro": "astro",
@@ -61,6 +60,6 @@
     ]
   },
   "volta": {
-    "node": "24.12.0"
+    "node": "24.14.0"
   }
 }
