@@ -3,14 +3,14 @@ import { test, expect, type Page } from "@playwright/test";
 const links: Record<string, string> = {
   Services: "/#services",
   Contact: "/#contact-form",
-  About: "/about",
+  About: "/about/",
 };
 
 async function testLinks(page: Page) {
   expect(page.getByTestId("home-link")).toHaveAttribute("href", "/");
 
   if (await page.getByLabel("open sidebar").isVisible()) {
-    page.getByLabel("open sidebar").click()
+    page.getByLabel("open sidebar").click();
   }
   for (const link in links) {
     const elem = page
